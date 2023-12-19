@@ -12,13 +12,61 @@ namespace Sana05
     {
         protected string Name;
         protected int Price;
-        Currency currency = new Currency("Dolar", 36.5);
+        Currency currency = new Currency("Dolar", 36.53);
         protected int Quantity;
         protected string Producer;
-        protected int weight;
+        protected int Weight;
         public double GetPriceInUAH()
         {
             return Price * currency.GetExRate();
+        }
+        public double GetTotalPriceInUAH()
+        {
+            return Quantity * GetPriceInUAH();
+        }
+        public double GetTotalWeight()
+        {
+            return Weight * GetTotalPriceInUAH();
+        }
+        public string GetName()
+        {
+            return Name;
+        }
+        public void SetName(string name)
+        {
+            this.Name = name;
+        }
+        public int GetPrice()
+        {
+            return Price;
+        }
+        public void SetPrice(int price)
+        {
+            this.Price = price;
+        }
+        public int GetQuantity()
+        {
+            return Quantity;
+        }
+        public void SetQuantity(int quantity)
+        {
+            this.Quantity = quantity;
+        }
+        public string GetProducer()
+        {
+            return Producer;
+        }
+        public void SetProducer(string producer)
+        {
+            Producer = producer;
+        }
+        public int GetWeight()
+        {
+            return Weight;
+        }
+        public void SetWeight(int weight)
+        {
+            Weight = weight;
         }
     }
 }
