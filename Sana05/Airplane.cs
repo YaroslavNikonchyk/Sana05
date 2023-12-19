@@ -27,5 +27,44 @@ namespace Sana05
                 arrive = true;
             return arrive;
         }
-    }
+        public Airplane(string startCity, string finishCity, MyDate startDate, MyDate finishDate)
+        {
+            StartCity = startCity;
+            FinishCity = finishCity;
+            StartDate = startDate;
+            FinishDate = finishDate;
+        }
+        public string GetStartCity()
+        {
+            return StartCity;
+        }
+        public void SetStartCity(string city)
+        {
+            StartCity = city;
+        }
+        public string GetFinishCity()
+        {
+            return FinishCity;
+        }
+        public void SetFinishCity(string city)
+        {
+            FinishCity = city;
+        }
+        public MyDate GetStartDate()
+        {
+            return StartDate;
+        }
+        public void SetStartDate(MyDate startDate)
+        {
+            StartDate = startDate;
+        }
+        public MyDate GetFinishDate()
+        {
+            return FinishDate;
+        }
+        public void SetFinishDate(MyDate finishDate)
+        {
+            FinishDate = finishDate;
+        }
+}
 }
