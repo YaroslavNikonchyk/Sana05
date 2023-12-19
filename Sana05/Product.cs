@@ -16,6 +16,16 @@ namespace Sana05
         protected int Quantity;
         protected string Producer;
         protected int Weight;
+
+        public Product(string name, int price, Currency currency, int quantity, string producer, int weight)
+        {
+            this.Name = name;
+            this.Price = price;
+            this.currency = currency;
+            this.Quantity = quantity;
+            this.Producer = producer;
+            this.Weight = weight;
+        }
         public double GetPriceInUAH()
         {
             return Price * currency.GetExRate();

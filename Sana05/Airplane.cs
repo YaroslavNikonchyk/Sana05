@@ -8,10 +8,8 @@ namespace Sana05
 {
     public class Airplane
     {
-
-
-        protected char StartCity;
-        protected char FinishCity;
+        protected string StartCity;
+        protected string FinishCity;
         protected MyDate StartDate = new MyDate(2023, 04, 19, 7, 00);
         protected MyDate FinishDate = new MyDate(2023, 04, 19, 23, 00);
         protected int GetTotalTime()

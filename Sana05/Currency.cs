@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sana05
 {
-    internal class Currency
+    public class Currency
     {
         protected string Name;
         protected double ExRate;

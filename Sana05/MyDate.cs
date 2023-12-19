@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -22,5 +23,46 @@ namespace Sana05
             Hours = hours;
             Minutes = minutes;
         }
+        public int GetYear()
+        {
+            return Year;
+        }
+        public void SetYear(int year)
+        {
+            Year=year;
+        }
+        public int GetMonth()
+        {
+            return Month;
+        }
+        public void SetMonth(int month)
+        {
+            Month=month;
+        }
+        public int GetDay()
+        {
+            return Day;
+        }
+        public void SetDay(int day)
+        {
+            Day=day;
+        }
+        public int GetHours()
+        {
+            return Hours;
+        }
+        public void SetHours(int hours)
+        {
+            Hours=hours;
+        }
+        public int GetMinutes()
+        {
+            return Minutes;
+        }
+        public void SetMinutes(int minutes)
+        {
+            Minutes=minutes;
+        }
+        
     }
 }
