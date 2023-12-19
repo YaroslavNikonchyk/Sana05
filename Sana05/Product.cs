@@ -10,16 +10,15 @@ namespace Sana05
 {
     public class Product
     {
-
         protected string Name;
         protected int Price;
         Currency currency = new Currency("Dolar", 36.5);
         protected int Quantity;
         protected string Producer;
         protected int weight;
-        public int GetPriceInUAH()
+        public double GetPriceInUAH()
         {
-
+            return Price * currency.GetExRate();
         }
     }
 }
