@@ -6,7 +6,28 @@ using System.Threading.Tasks;
 
 namespace Sana05
 {
-    internal class Class1
+    public class Airplane
     {
+
+
+        protected char StartCity;
+        protected char FinishCity;
+        protected MyDate StartDate = new MyDate(2023, 04, 19, 7, 00);
+        protected MyDate FinishDate = new MyDate(2023, 04, 19, 23, 00);
+        protected int GetTotalTime()
+        {
+            int minutes1 = 0;
+            int minutes2 = 0;
+            minutes1 = StartDate.GetHours() * 60 + StartDate.GetMinutes();
+            minutes2 = FinishDate.GetHours() * 60 + FinishDate.GetMinutes();
+            return Math.Abs(minutes2 - minutes1);
+        }
+        protected bool IsArrivingToday()
+        {
+            bool arrive = false;
+            if (StartDate.GetDay() == FinishDate.GetDay())
+                arrive = true;
+            return arrive;
+        }
     }
 }
