@@ -10,8 +10,23 @@ namespace Sana05
     {
         protected string StartCity;
         protected string FinishCity;
-        protected MyDate StartDate = new MyDate(2023, 04, 19, 7, 00);
-        protected MyDate FinishDate = new MyDate(2023, 04, 19, 23, 00);
+        protected MyDate StartDate;
+        protected MyDate FinishDate;
+
+        public Airplane()
+        {
+            StartCity = "Kyiv";
+            FinishCity = "Varshava";
+            StartDate = new MyDate(2023,4,19,12,00);
+            FinishDate = new MyDate(2023, 4, 19, 20, 00);
+        }
+        public Airplane(string startCity, string finishCity, MyDate startDate, MyDate finishDate)
+        {
+            StartCity = startCity;
+            FinishCity = finishCity;
+            StartDate = startDate;
+            FinishDate = finishDate;
+        }
         protected int GetTotalTime()
         {
             int minutes1 = 0;
@@ -26,13 +41,6 @@ namespace Sana05
             if (StartDate.GetDay() == FinishDate.GetDay())
                 arrive = true;
             return arrive;
-        }
-        public Airplane(string startCity, string finishCity, MyDate startDate, MyDate finishDate)
-        {
-            StartCity = startCity;
-            FinishCity = finishCity;
-            StartDate = startDate;
-            FinishDate = finishDate;
         }
         public string GetStartCity()
         {
@@ -66,5 +74,5 @@ namespace Sana05
         {
             FinishDate = finishDate;
         }
-}
+    }
 }

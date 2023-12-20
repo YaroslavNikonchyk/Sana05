@@ -15,6 +15,14 @@ namespace Sana05
         protected int Hours;
         protected int Minutes;
 
+        public MyDate() {
+            Year = 2023;
+            Month = 7;
+            Day = 19;
+            Hours = 7;
+            Minutes=0;
+        }
+        
         public MyDate(int year, int month, int day, int hours, int minutes)
         {
             Year = year;

@@ -12,11 +12,20 @@ namespace Sana05
     {
         protected string Name;
         protected int Price;
-        Currency currency = new Currency("Dolar", 36.53);
+        protected Currency currency;
         protected int Quantity;
         protected string Producer;
         protected int Weight;
 
+        public Product()
+        {
+            Name = "Car";
+            Price = 10000;
+            currency = new Currency("Dolar", 36.53);
+            Quantity = 1;
+            Producer = "Crysler";
+            Weight = 1500;
+        }
         public Product(string name, int price, Currency currency, int quantity, string producer, int weight)
         {
             this.Name = name;

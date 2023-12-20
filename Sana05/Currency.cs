@@ -10,6 +10,12 @@ namespace Sana05
     {
         protected string Name;
         protected double ExRate;
+
+        public Currency()
+        {
+            Name = "dolar";
+            ExRate = 36.51;
+        }
         public Currency(string name, double exRate)
         {
             Name = name;
