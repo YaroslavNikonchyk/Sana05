@@ -12,7 +12,13 @@ namespace Sana05
         protected string FinishCity;
         protected MyDate StartDate;
         protected MyDate FinishDate;
-
+        public Airplane(Airplane previousAirplane)
+        {
+            StartCity = previousAirplane.StartCity;
+            FinishCity = previousAirplane.FinishCity;
+            StartDate = previousAirplane.StartDate;
+            FinishDate = previousAirplane.FinishDate;
+        }
         public Airplane()
         {
             StartCity = "Kyiv";
@@ -26,6 +32,11 @@ namespace Sana05
             FinishCity = finishCity;
             StartDate = startDate;
             FinishDate = finishDate;
+        }
+        public Airplane(string startCity,string finishCity)
+        {
+            StartCity = startCity;
+            FinishCity = finishCity;
         }
         protected int GetTotalTime()
         {

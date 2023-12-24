@@ -10,7 +10,11 @@ namespace Sana05
     {
         protected string Name;
         protected double ExRate;
-
+        public Currency(Currency previousCurrency)
+        {
+            Name= previousCurrency.Name;
+            ExRate= previousCurrency.ExRate;
+        }
         public Currency()
         {
             Name = "dolar";
@@ -20,6 +24,10 @@ namespace Sana05
         {
             Name = name;
             ExRate = exRate;
+        }
+        public Currency(double exRate)
+        {
+            ExRate= exRate;
         }
         public string GetName()
         {

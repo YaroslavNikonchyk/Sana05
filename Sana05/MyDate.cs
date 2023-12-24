@@ -14,15 +14,28 @@ namespace Sana05
         protected int Day;
         protected int Hours;
         protected int Minutes;
-
-        public MyDate() {
+        public MyDate(MyDate previousDate)
+        {
+            Year = previousDate.Year;
+            Month = previousDate.Month;
+            Day = previousDate.Day;
+            Hours = previousDate.Hours;
+            Minutes = previousDate.Minutes;
+        }
+        public MyDate()
+        {
             Year = 2023;
             Month = 7;
             Day = 19;
             Hours = 7;
-            Minutes=0;
+            Minutes = 0;
         }
-        
+        public MyDate(int year, int month, int day)
+        {
+            Year = year;
+            Month = month;
+            Day = day;
+        }
         public MyDate(int year, int month, int day, int hours, int minutes)
         {
             Year = year;
@@ -37,7 +50,7 @@ namespace Sana05
         }
         public void SetYear(int year)
         {
-            Year=year;
+            Year = year;
         }
         public int GetMonth()
         {
@@ -45,7 +58,7 @@ namespace Sana05
         }
         public void SetMonth(int month)
         {
-            Month=month;
+            Month = month;
         }
         public int GetDay()
         {
@@ -53,7 +66,7 @@ namespace Sana05
         }
         public void SetDay(int day)
         {
-            Day=day;
+            Day = day;
         }
         public int GetHours()
         {
@@ -61,7 +74,7 @@ namespace Sana05
         }
         public void SetHours(int hours)
         {
-            Hours=hours;
+            Hours = hours;
         }
         public int GetMinutes()
         {
@@ -69,8 +82,8 @@ namespace Sana05
         }
         public void SetMinutes(int minutes)
         {
-            Minutes=minutes;
+            Minutes = minutes;
         }
-        
+
     }
 }

@@ -16,7 +16,15 @@ namespace Sana05
         protected int Quantity;
         protected string Producer;
         protected int Weight;
-
+        public Product(Product previousProduct)
+        {
+            Name = previousProduct.Name;
+            Price = previousProduct.Price;
+            currency = previousProduct.currency;
+            Quantity = previousProduct.Quantity;
+            Producer = previousProduct.Producer;
+            Weight = previousProduct.Weight;
+        }
         public Product()
         {
             Name = "Car";
@@ -25,6 +33,12 @@ namespace Sana05
             Quantity = 1;
             Producer = "Crysler";
             Weight = 1500;
+        }
+    
+        public Product(string name, int price)
+        {
+            Name = name;
+            Price = price;
         }
         public Product(string name, int price, Currency currency, int quantity, string producer, int weight)
         {
