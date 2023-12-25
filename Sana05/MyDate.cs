@@ -9,11 +9,11 @@ namespace Sana05
 {
     public class MyDate
     {
-        protected int Year;
-        protected int Month;
-        protected int Day;
-        protected int Hours;
-        protected int Minutes;
+        public int Year { get; set; }
+        public int Month { get; set; }
+        public int Day { get; set; }
+        public int Hours { get; set; }
+        public int Minutes { get; set; }
         public MyDate(MyDate previousDate)
         {
             Year = previousDate.Year;
@@ -44,46 +44,5 @@ namespace Sana05
             Hours = hours;
             Minutes = minutes;
         }
-        public int GetYear()
-        {
-            return Year;
-        }
-        public void SetYear(int year)
-        {
-            Year = year;
-        }
-        public int GetMonth()
-        {
-            return Month;
-        }
-        public void SetMonth(int month)
-        {
-            Month = month;
-        }
-        public int GetDay()
-        {
-            return Day;
-        }
-        public void SetDay(int day)
-        {
-            Day = day;
-        }
-        public int GetHours()
-        {
-            return Hours;
-        }
-        public void SetHours(int hours)
-        {
-            Hours = hours;
-        }
-        public int GetMinutes()
-        {
-            return Minutes;
-        }
-        public void SetMinutes(int minutes)
-        {
-            Minutes = minutes;
-        }
-
     }
 }

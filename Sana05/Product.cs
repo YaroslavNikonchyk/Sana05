@@ -10,12 +10,12 @@ namespace Sana05
 {
     public class Product
     {
-        protected string Name;
-        protected int Price;
-        protected Currency currency;
-        protected int Quantity;
-        protected string Producer;
-        protected int Weight;
+        public string Name { get; set; }
+        public int Price { get; set; }
+        public Currency currency { get; set; }
+        public int Quantity { get; set; }
+        public string Producer { get; set; }
+        public int Weight { get; set; }
         public Product(Product previousProduct)
         {
             Name = previousProduct.Name;
@@ -34,7 +34,7 @@ namespace Sana05
             Producer = "Crysler";
             Weight = 1500;
         }
-    
+
         public Product(string name, int price)
         {
             Name = name;
@@ -51,7 +51,7 @@ namespace Sana05
         }
         public double GetPriceInUAH()
         {
-            return Price * currency.GetExRate();
+            return Price * currency.ExRate;
         }
         public double GetTotalPriceInUAH()
         {
@@ -59,47 +59,7 @@ namespace Sana05
         }
         public double GetTotalWeight()
         {
-            return Weight * GetTotalPriceInUAH();
-        }
-        public string GetName()
-        {
-            return Name;
-        }
-        public void SetName(string name)
-        {
-            this.Name = name;
-        }
-        public int GetPrice()
-        {
-            return Price;
-        }
-        public void SetPrice(int price)
-        {
-            this.Price = price;
-        }
-        public int GetQuantity()
-        {
-            return Quantity;
-        }
-        public void SetQuantity(int quantity)
-        {
-            this.Quantity = quantity;
-        }
-        public string GetProducer()
-        {
-            return Producer;
-        }
-        public void SetProducer(string producer)
-        {
-            Producer = producer;
-        }
-        public int GetWeight()
-        {
-            return Weight;
-        }
-        public void SetWeight(int weight)
-        {
-            Weight = weight;
+            return Weight * Quantity;
         }
     }
 }

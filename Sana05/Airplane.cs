@@ -8,10 +8,10 @@ namespace Sana05
 {
     public class Airplane
     {
-        protected string StartCity;
-        protected string FinishCity;
-        protected MyDate StartDate;
-        protected MyDate FinishDate;
+        public string StartCity { get; set; }
+        public string FinishCity { get; set; }
+        public MyDate StartDate { get; set; }
+        public MyDate FinishDate { get; set; }
         public Airplane(Airplane previousAirplane)
         {
             StartCity = previousAirplane.StartCity;
@@ -23,7 +23,7 @@ namespace Sana05
         {
             StartCity = "Kyiv";
             FinishCity = "Varshava";
-            StartDate = new MyDate(2023,4,19,12,00);
+            StartDate = new MyDate(2023, 4, 19, 12, 00);
             FinishDate = new MyDate(2023, 4, 19, 20, 00);
         }
         public Airplane(string startCity, string finishCity, MyDate startDate, MyDate finishDate)
@@ -33,57 +33,27 @@ namespace Sana05
             StartDate = startDate;
             FinishDate = finishDate;
         }
-        public Airplane(string startCity,string finishCity)
+        public Airplane(string startCity, string finishCity)
         {
             StartCity = startCity;
             FinishCity = finishCity;
         }
-        protected int GetTotalTime()
+        public int GetTotalTime()
         {
             int minutes1 = 0;
             int minutes2 = 0;
-            minutes1 = StartDate.GetHours() * 60 + StartDate.GetMinutes();
-            minutes2 = FinishDate.GetHours() * 60 + FinishDate.GetMinutes();
-            return Math.Abs(minutes2 - minutes1);
+            int minutes3 = 0;
+            minutes1 = StartDate.Hours * 60 + StartDate.Minutes;
+            minutes2 = FinishDate.Hours * 60 + FinishDate.Minutes;
+            minutes3 = (FinishDate.Day - StartDate.Day) * 24*60;
+            return Math.Abs(minutes3+(minutes2 - minutes1));
         }
-        protected bool IsArrivingToday()
+        public bool IsArrivingToday()
         {
             bool arrive = false;
-            if (StartDate.GetDay() == FinishDate.GetDay())
+            if (StartDate.Day == FinishDate.Day)
                 arrive = true;
             return arrive;
-        }
-        public string GetStartCity()
-        {
-            return StartCity;
-        }
-        public void SetStartCity(string city)
-        {
-            StartCity = city;
-        }
-        public string GetFinishCity()
-        {
-            return FinishCity;
-        }
-        public void SetFinishCity(string city)
-        {
-            FinishCity = city;
-        }
-        public MyDate GetStartDate()
-        {
-            return StartDate;
-        }
-        public void SetStartDate(MyDate startDate)
-        {
-            StartDate = startDate;
-        }
-        public MyDate GetFinishDate()
-        {
-            return FinishDate;
-        }
-        public void SetFinishDate(MyDate finishDate)
-        {
-            FinishDate = finishDate;
         }
     }
 }
