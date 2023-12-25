@@ -46,7 +46,7 @@ namespace Sana05
             minutes1 = StartDate.Hours * 60 + StartDate.Minutes;
             minutes2 = FinishDate.Hours * 60 + FinishDate.Minutes;
             minutes3 = (FinishDate.Day - StartDate.Day) * 24*60;
-            return Math.Abs(minutes3+(minutes2 - minutes1));
+            return  Math.Abs(minutes3 + minutes2 - minutes1);
         }
         public bool IsArrivingToday()
         {

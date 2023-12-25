@@ -5,8 +5,8 @@ class Test
     static void Main(string[] args)
     {
         Console.WriteLine("Статистика польоту №1");
-        MyDate startDate = new MyDate(2023, 7, 12, 12, 00);
-        MyDate finishDate = new MyDate(2023, 7, 12, 17, 30);
+        MyDate startDate = new MyDate(2023, 7, 12, 18, 00);
+        MyDate finishDate = new MyDate(2023, 7, 12, 19, 30);
         Airplane firstAirpale = new Airplane("Zhytomir", "Ovrych", startDate, finishDate);
         Console.WriteLine($"Тривалiсть польоту в хвилинах: {firstAirpale.GetTotalTime()}");
         Console.WriteLine($"Чи прибуття в тей же день : {firstAirpale.IsArrivingToday()}");
