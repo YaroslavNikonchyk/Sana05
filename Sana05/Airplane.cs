@@ -16,8 +16,8 @@ namespace Sana05
         {
             StartCity = previousAirplane.StartCity;
             FinishCity = previousAirplane.FinishCity;
-            StartDate = previousAirplane.StartDate;
-            FinishDate = previousAirplane.FinishDate;
+            StartDate = new MyDate(previousAirplane.StartDate);
+            FinishDate = new MyDate(previousAirplane.FinishDate);
         }
         public Airplane()
         {
@@ -45,8 +45,8 @@ namespace Sana05
             int minutes3 = 0;
             minutes1 = StartDate.Hours * 60 + StartDate.Minutes;
             minutes2 = FinishDate.Hours * 60 + FinishDate.Minutes;
-            minutes3 = (FinishDate.Day - StartDate.Day) * 24*60;
-            return  Math.Abs(minutes3 + minutes2 - minutes1);
+            minutes3 = (FinishDate.Day - StartDate.Day) * 24 * 60;
+            return Math.Abs(minutes3 + minutes2 - minutes1);
         }
         public bool IsArrivingToday()
         {

@@ -20,7 +20,7 @@ namespace Sana05
         {
             Name = previousProduct.Name;
             Price = previousProduct.Price;
-            Cost = previousProduct.Cost;
+            Cost = new Currency (previousProduct.Cost);
             Quantity = previousProduct.Quantity;
             Producer = previousProduct.Producer;
             Weight = previousProduct.Weight;
