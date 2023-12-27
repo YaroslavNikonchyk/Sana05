@@ -20,8 +20,8 @@ class Test
 
         Console.WriteLine();
         Console.WriteLine("Iнформацiя про продукт:");
-        Currency currency = new Currency("Dolar", 35.51);
-        Product product = new Product("Laptop", 1000, currency, 10, "Dell", 2);
+        Currency Cost = new Currency("Dolar", 35.51);
+        Product product = new Product("Laptop", 1000, Cost, 10, "Dell", 2);
         Console.WriteLine($"Цiна продукту в гривнях: {product.GetPriceInUAH()} UAH");
         Console.WriteLine($"Цiна всiх продуктiв в гривнях: {product.GetTotalPriceInUAH()} UAH");
         Console.WriteLine($"Загальна вага всiх продуктiв на складi данного типу:{product.GetTotalWeight()} kg");

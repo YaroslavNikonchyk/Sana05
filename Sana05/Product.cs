@@ -12,7 +12,7 @@ namespace Sana05
     {
         public string Name { get; set; }
         public int Price { get; set; }
-        public Currency currency { get; set; }
+        public Currency Cost { get; set; }
         public int Quantity { get; set; }
         public string Producer { get; set; }
         public int Weight { get; set; }
@@ -20,7 +20,7 @@ namespace Sana05
         {
             Name = previousProduct.Name;
             Price = previousProduct.Price;
-            currency = previousProduct.currency;
+            Cost = previousProduct.Cost;
             Quantity = previousProduct.Quantity;
             Producer = previousProduct.Producer;
             Weight = previousProduct.Weight;
@@ -29,7 +29,7 @@ namespace Sana05
         {
             Name = "Car";
             Price = 10000;
-            currency = new Currency("Dolar", 36.53);
+            Cost = new Currency("Dolar", 36.53);
             Quantity = 1;
             Producer = "Crysler";
             Weight = 1500;
@@ -42,16 +42,16 @@ namespace Sana05
         }
         public Product(string name, int price, Currency currency, int quantity, string producer, int weight)
         {
-            this.Name = name;
-            this.Price = price;
-            this.currency = currency;
-            this.Quantity = quantity;
-            this.Producer = producer;
-            this.Weight = weight;
+            Name = name;
+            Price = price;
+            Cost = currency;
+            Quantity = quantity;
+            Producer = producer;
+            Weight = weight;
         }
         public double GetPriceInUAH()
         {
-            return Price * currency.ExRate;
+            return Price * Cost.ExRate;
         }
         public double GetTotalPriceInUAH()
         {
